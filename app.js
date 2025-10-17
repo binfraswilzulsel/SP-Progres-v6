@@ -27,7 +27,7 @@ function getStatusClass(pelaksanaan) {
     switch (pelaksanaan.toLowerCase()) {
         case 'belum terlaksana':
             return 'status-belum';
-        case 'on progres':
+        case 'onprogres':
             return 'status-onprogres';
         case 'berproses':
             return 'status-berproses';
@@ -195,4 +195,5 @@ function renderKegiatan(containerElement, kegiatanData) {
 }
 
 // Panggil fungsi utama untuk memulai rendering saat app.js dimuat
+
 fetchAndRenderData();
