@@ -6,7 +6,7 @@
     <title>Strong Point Progres</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        /* CSS dari inputan Anda (tidak diubah) */
+        /* CSS untuk Styling Dasar dan Responsif */
         :root {
             --dark-blue: #1C3C6B;
             --white: #FFFFFF;
@@ -131,13 +131,31 @@
             cursor: pointer;
         }
 
+        .kegiatan-detail {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+            display: none; 
+        }
+
         .kegiatan-card.expanded .kegiatan-detail {
             display: block;
         }
 
+        /* PERBAIKAN 1: PENGATURAN FONT-SIZE UNTUK KONSISTENSI DI MOBILE */
+        .kegiatan-detail p,
+        .kegiatan-detail span,
+        .kegiatan-detail b,
+        .kegiatan-detail strong {
+            /* Pastikan ukuran font tetap 14px, mengabaikan zoom browser */
+            font-size: 14px !important; 
+            margin: 0; 
+            line-height: 1.5;
+        }
+        
         .status-container {
             display: flex;
-            align-items: center; 
+            align-items: center;
             margin: 5px 0;
         }
 
@@ -149,11 +167,20 @@
             margin-right: 6px; 
         }
         
+        /* PERBAIKAN 2: MENGUBAH SELECTOR status-onprogres (untuk mengatasi dot yang hilang) */
+        /* Pastikan selector di sini sesuai dengan output lower-case dari JS */
         .status-dot.status-belum { background-color: var(--status-red); }
-        .status-dot.status-onprogres { background-color: var(--status-green); }
+        .status-dot.status-onprogres { background-color: var(--status-green); } 
         .status-dot.status-berproses { background-color: var(--status-orange); }
         .status-dot.status-selesai { background-color: var(--status-blue); }
         
+        /* Khusus untuk teks label BOLD di status container (misal: "Pelaksanaan :") */
+        .status-container b {
+            font-size: 14px !important; 
+            white-space: nowrap; 
+            padding-right: 5px; 
+        }
+
         .progress-bar-container {
             margin: 8px 0;
         }
@@ -188,30 +215,8 @@
 
         .pdf-button:hover { background-color: #d32f2f; }
         
-        /* Media Query (Kosongkan saja jika tidak ada perubahan spesifik) */
         @media (max-width: 600px) {
             /* ... */
-
-            /* ... (Semua kode CSS lama Anda di sini, dari :root sampai @media) ... */
-
-    /* MULAI TAMBAHKAN KODE INI DI BAGIAN BAWAH */
-    
-    /* 1. Ukuran font dasar untuk paragraf detail */
-    .kegiatan-detail p {
-        font-size: 14px !important; 
-        margin: 4px 0;
-    }
-
-    /* 2. KHUSUS untuk label BOLD di status container (misal: "Pelaksanaan :") */
-    .status-container b {
-        font-size: 14px !important; 
-        white-space: nowrap; /* Mencegah teks label putus baris */
-    }
-
-    /* 3. Pastikan teks STRONG status (Selesai/On Progres) juga memiliki ukuran yang sama */
-    .status-container strong {
-        font-size: 14px !important;
-    }
         }
     </style>
 </head>
@@ -228,4 +233,3 @@
 
 </body>
 </html>
-
