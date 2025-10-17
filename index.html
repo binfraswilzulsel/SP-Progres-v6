@@ -6,7 +6,7 @@
     <title>Strong Point Progres</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        /* CSS untuk Styling Dasar dan Responsif */
+        /* CSS dari inputan Anda (tidak diubah) */
         :root {
             --dark-blue: #1C3C6B;
             --white: #FFFFFF;
@@ -144,20 +144,9 @@
             display: block;
         }
 
-        /* PERBAIKAN 1: PENGATURAN FONT-SIZE UNTUK KONSISTENSI DI MOBILE */
-        .kegiatan-detail p,
-        .kegiatan-detail span,
-        .kegiatan-detail b,
-        .kegiatan-detail strong {
-            /* Pastikan ukuran font tetap 14px, mengabaikan zoom browser */
-            font-size: 14px !important; 
-            margin: 0; 
-            line-height: 1.5;
-        }
-        
         .status-container {
             display: flex;
-            align-items: center;
+            align-items: center; 
             margin: 5px 0;
         }
 
@@ -169,20 +158,11 @@
             margin-right: 6px; 
         }
         
-        /* PERBAIKAN 2: MENGUBAH SELECTOR status-onprogres (untuk mengatasi dot yang hilang) */
-        /* Pastikan selector di sini sesuai dengan output lower-case dari JS */
         .status-dot.status-belum { background-color: var(--status-red); }
-        .status-dot.status-onprogres { background-color: var(--status-green); } 
+        .status-dot.status-onprogres { background-color: var(--status-green); }
         .status-dot.status-berproses { background-color: var(--status-orange); }
         .status-dot.status-selesai { background-color: var(--status-blue); }
         
-        /* Khusus untuk teks label BOLD di status container (misal: "Pelaksanaan :") */
-        .status-container b {
-            font-size: 14px !important; 
-            white-space: nowrap; 
-            padding-right: 5px; 
-        }
-
         .progress-bar-container {
             margin: 8px 0;
         }
@@ -217,6 +197,7 @@
 
         .pdf-button:hover { background-color: #d32f2f; }
         
+        /* Media Query (Kosongkan saja jika tidak ada perubahan spesifik) */
         @media (max-width: 600px) {
             /* ... */
         }
@@ -235,4 +216,3 @@
 
 </body>
 </html>
-
