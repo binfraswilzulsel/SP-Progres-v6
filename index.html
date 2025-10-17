@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strong Point Progres</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* CSS dari inputan Anda (tidak diubah) */
+        :root {
+            --dark-blue: #1C3C6B;
+            --white: #FFFFFF;
+            --card-bg: #FFFFFF;
+            --border-radius: 12px;
+            --green-bar: #4CAF50;
+            --orange-bar: #FF9800;
+            --red-button: #F44336;
+            --status-red: #F44336;   
+            --status-green: #4CAF50; 
+            --status-orange: #FF9800;
+            --status-blue: #2196F3;   
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-top: 60px;
+            background-color: #EFEFEF;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--dark-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 15px 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .opd-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .opd-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .opd-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .opd-info {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .opd-emoji {
+            font-size: 3em;
+            margin-right: 15px; 
+            flex-shrink: 0; 
+        }
+
+        .opd-text {
+            text-align: left;
+            flex-grow: 1; 
+        }
+
+        .opd-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        
+        .toggle-icon {
+            font-size: 28px;
+            color: var(--dark-blue);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+        
+        .opd-card.expanded > .opd-header .toggle-icon {
+            transform: rotate(180deg);
+        }
+        
+        .kegiatan-card.expanded .kegiatan-header .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .kegiatan-container {
+            margin-top: 10px;
+            padding-left: 20px; 
+            display: none; 
+        }
+        
+        .kegiatan-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            margin: 10px 0;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            border: 1px solid #ddd;
+        }
+        
+        .kegiatan-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .kegiatan-detail {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+            display: none; 
+        }
+
+        .kegiatan-card.expanded .kegiatan-detail {
+            display: block;
+        }
+
+        .status-container {
+            display: flex;
+            align-items: center; 
+            margin: 5px 0;
+        }
+
+        .status-dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-right: 6px; 
+        }
+        
+        .status-dot.status-belum { background-color: var(--status-red); }
+        .status-dot.status-onprogres { background-color: var(--status-green); }
+        .status-dot.status-berproses { background-color: var(--status-orange); }
+        .status-dot.status-selesai { background-color: var(--status-blue); }
+        
+        .progress-bar-container {
+            margin: 8px 0;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .progress-keuangan .progress-fill { background-color: var(--green-bar); }
+        .progress-fisik .progress-fill { background-color: var(--orange-bar); }
+
+        .pdf-button {
+            display: inline-block;
+            background-color: var(--red-button);
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .pdf-button:hover { background-color: #d32f2f; }
+        
+        /* Media Query (Kosongkan saja jika tidak ada perubahan spesifik) */
+        @media (max-width: 600px) {
+            /* ... */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        Strong Point Progres
+    </div>
+
+    <div class="container" id="main-container">
+        </div>
+
+    <script src="app.js"></script> 
+
+</body>
+</html>

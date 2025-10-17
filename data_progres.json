@@ -1,0 +1,107 @@
+[
+    {
+        "opd": "BINA MARGA & KONSTRUKSI",
+        "emoji": "🚧",
+        "pagu_total": "417.382.258.930",
+        "kegiatan": [
+            {
+                "no": 1,
+                "nama": "Rekonstruksi Jalan",
+                "pagu": "393.233.458.930",
+                "pelaksanaan": "Belum Terlaksana",
+                "bobot": 72.62,
+                "keterangan": "Keterlambatan proses, (1)Untuk paket MK; seluruh paket telah terdapat pemenang, (2)Untuk paket fisik masih tender.",
+                "realisasi_fisik": 19.00,
+                "realisasi_keuangan": 0.00,
+                "rencana_aksi": "Melanjutkan proses tender.",
+                "link_pdf": "https://drive.google.com/contoh-laporan.pdf"
+            },
+            {
+                "no": 2,
+                "nama": "Pembangunan Jembatan",
+                "pagu": "24.148.800.000",
+                "pelaksanaan": "On Progres",
+                "bobot": 4.46,
+                "keterangan": "On track, 3 paket telah terkontrak.",
+                "realisasi_fisik": 49.02,
+                "realisasi_keuangan": 7.44,
+                "rencana_aksi": "Pelaksanaan Fisik berjalan .",
+                "link_pdf": "https://drive.google.com/contoh-laporan"
+            }
+        ]
+    },
+    {
+        "opd": "SUMBERDAYA AIR",
+        "emoji": "💧",
+        "pagu_total": "161.808.109.180",
+        "kegiatan": [
+            {
+                "no": 1,
+                "nama": "Rehabilitasi Daerah Irigasi (D.I)",
+                "pagu": "82.304.109.180",
+                "pelaksanaan": "Berproses",
+                "bobot": 29.62,
+                "keterangan": "",
+                "realisasi_fisik": 33.93,
+                "realisasi_keuangan": 17.11,
+                "rencana_aksi": "Proses Reviuw PBJ untuk 4 Paket pekerjaan Desain and Build",
+                "link_pdf": "https://drive.google.com/contoh-laporan"
+            },
+            {
+                "no": 2,
+                "nama": "Pembangunan Spam",
+                "pagu": "79.504.000.000",
+                "pelaksanaan": "On Progres",
+                "bobot": 28.61,
+                "keterangan": "Tahap Pelaksanaan Pekerjaan Pemasangan Pipa dan Acsesories",
+                "realisasi_fisik": 32.50,
+                "realisasi_keuangan": 0.00,
+                "rencana_aksi": "Lanjutan Pemasangan Pipa STO selanjutnya",
+                "link_pdf": "https://drive.google.com/contoh-laporan"
+            }
+        ]
+    },
+    {
+        "opd": "PERKIMTAN",
+        "emoji": "🏡",
+        "pagu_total": "18.050.781.300",
+        "kegiatan": [
+            {
+                "no": 1,
+                "nama": "Program Pengadaan Tanah untuk Kepentingan Umum (Pembebasan Lahan Sekolah Menengah Atas di Kabupaten Bone)",
+                "pagu": "14.850.781.300",
+                "pelaksanaan": "Belum Terlaksana",
+                "bobot": 57.52,
+                "keterangan": "Konsultan mencetak dokumen perencanaan untuk diajukan kepada Kadis Perkimtan",
+                "realisasi_fisik": 43.00,
+                "realisasi_keuangan": 0.00,
+                "rencana_aksi": "Konsultan mencetak/print DPPT untuk diajukan kepada Kadis Perkimtan untuk dilakukan penetapan DPPT",
+                "link_pdf": "https://drive.google.com/contoh-laporan"
+            },
+            {
+                "no": 2,
+                "nama": "Pembangunan Dan Pengadaan Air Siap Minum Dengan Teknologi SWRO Kab. Kepulauan Selayar",
+                "pagu": "3.200.000.000",
+                "pelaksanaan": "Berproses",
+                "bobot": 12.39,
+                "keterangan": "1. Pengadaan beberapa material ARSINUM yang indent oleh penyedia 2. Persiapan penyediaan material bangunan pelindung di Makassar dan Selayar",
+                "realisasi_fisik": 0.43,
+                "realisasi_keuangan": 0.00,
+                "rencana_aksi": "Persiapan pengangkutan material bangunan pelindung ARSINUM di Makassar dan Selayar",
+                "link_pdf": "https://drive.google.com/contoh-laporan"
+            },
+            {
+                "no": 3,
+                "nama": "Pembangunan Dan Pengadaan Air Siap Minum Dengan Teknologi SWRO Kab. Soppeng",
+                "pagu": "3.200.000.000",
+                "pelaksanaan": "Selesai",
+                "bobot": 12.39,
+                "keterangan": "1. Pengadaan beberapa material ARSINUM yang indent oleh penyedia 2. Persiapan penyediaan material bangunan pelindung di Makassar dan Selayar",
+                "realisasi_fisik": 99.00,
+                "realisasi_keuangan": 89.00,
+                "rencana_aksi": "Persiapan pengangkutan material bangunan pelindung ARSINUM di Makassar dan Selayar",
+                "link_pdf": "https://drive.google.com/contoh-laporan"
+            }
+        ]
+    }
+]
